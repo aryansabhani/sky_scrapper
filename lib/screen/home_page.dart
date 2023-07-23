@@ -7,6 +7,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle uperstyle = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+    );
+    TextStyle lowerstyle = TextStyle(
+      fontSize: 12,
+    );
     return Consumer<WeatherProvider>(builder: (context, provider, _) {
       return Scaffold(
         appBar: AppBar(
@@ -87,7 +94,7 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w600),
                         ),
-                      ),
+                      ),Divider(),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
@@ -114,11 +121,13 @@ class HomePage extends StatelessWidget {
                                         SizedBox(
                                           height: 5,
                                         ),
+                                        Divider(),
                                         Image.network(
                                             "https://cdn-icons-png.flaticon.com/128/9231/9231936.png",
                                             height: 35),
                                         Text(
                                             "${provider.allday[0]['hour'][index]['wind_kph']}km"),
+                                        Divider(),
                                         Image.network(
                                             "https://cdn-icons-png.flaticon.com/128/1628/1628763.png",
                                             height: 35),
@@ -127,21 +136,97 @@ class HomePage extends StatelessWidget {
                                       ],
                                     ))),
                       ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-                            children: List.generate(
-                                provider.NextDayWeather.length,
-                                (index) => Row(
-                                      children: [
-                                        Text(
-                                            "${provider.NextDayWeather[index]['date']}"),
-                                      ],
-                                    ))),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Card(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "7 day forecast",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                      Divider(),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text("Date", style: uperstyle),
+                            SizedBox(
+                              height: 25,
+                            ),
+                            Text("Sun\nRise", style: uperstyle),
+                            Text("Sun\nSet", style: uperstyle),
+                            Text("Max\nTemp", style: uperstyle),
+                            Text("Min\nTemp", style: uperstyle),
+                            Text("Weather", style: uperstyle),
+                          ]),
+                      Column(
+                        children: List.generate(
+                          provider.NextDayWeather.length,
+                          (index) => SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                Divider(),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      "${provider.NextDayWeather[index]['date']}",
+                                      style: lowerstyle,
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "${provider.NextDayWeather[index]['astro']['sunrise']}"
+                                          .substring(0, 6),
+                                      style: lowerstyle,
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "${provider.NextDayWeather[index]['astro']['sunset']}"
+                                          .substring(0, 6),
+                                      style: lowerstyle,
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "${provider.NextDayWeather[index]['day']['maxtemp_c']}°C",
+                                      style: lowerstyle,
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "${provider.NextDayWeather[index]['day']['mintemp_c']}°C",
+                                      style: lowerstyle,
+                                    ),
+                                    Image.network(
+                                      "http:${provider.NextDayWeather[index]['day']['condition']['icon']}",
+                                      height: 70,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

@@ -34,7 +34,14 @@ class ApiHelper {
     }
   }
 
-  nextdayWeather(){
-    String 
+  nextdayWeather({required String Location})async{
+    String weatherapi = "http://api.weatherapi.com/v1/forecast.json?key=857e6eab0b414c1084b65918232307&q=$Location&days=7&aqi=no&alerts=no";
+    http.Response response = await http.get(Uri.parse(weatherapi));
+
+    if(response.statusCode == 200){
+      var data = jsonDecode(response.body);
+      var weatherofnextday = await data['forecast']['forecastday'];
+      return weatherofnextday;
+    }
   }
 }

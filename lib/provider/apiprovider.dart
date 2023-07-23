@@ -4,10 +4,12 @@ import 'package:sky_scrapper/provider/helper/apihelper.dart';
 class WeatherProvider extends ChangeNotifier {
   Map<String, dynamic>? current;
   List allday = [];
+  List NextDayWeather= [];
 
   WeatherProvider() {
     getnewWeather();
     allDayWeather();
+    nextdayWeather();
   }
 
   getnewWeather({String LocationName = "surat"}) async {
@@ -17,8 +19,16 @@ class WeatherProvider extends ChangeNotifier {
 
   allDayWeather({String LocationName = "surat"}) async {
     allday = await ApiHelper.apiHelper.alldayWeather(Location: LocationName);
-    print("============================================================================");
-    print("${allday[0]['hour'].length}");
+
+    notifyListeners();
+  }
+
+  nextdayWeather({String LocationName = "surat"}) async {
+    NextDayWeather =
+        await ApiHelper.apiHelper.nextdayWeather(Location: LocationName);
+    print(
+        "============================================================================");
+    print("${NextDayWeather}");
 
     notifyListeners();
   }

@@ -53,19 +53,12 @@ experience.</p>
 <img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/ccab27b2-9283-4610-8842-d8f0840977f1" height="400">
 <img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a9f69211-13d2-4488-a195-9abc3b883923"  height="400">
 <img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a9898a5a-dc09-42cc-90fd-1abd931e31d6"  height="400">
-<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a48054f3-e0c8-41d7-b19c-22497f220b4f" alt="Girl in a jacket" height="400">
+<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a48054f3-e0c8-41d7-b19c-22497f220b4f"  height="400">
 
-![image]()
-![image]()
-![image]()
-![image]()
-![image]()
 
 
 <h2>Video:-</h2>
 
-
-https://github.com/aryansabhani/Departure/assets/112259316/69116780-7941-4be4-bf0e-492d3fdcd271
-
+https://github.com/aryansabhani/sky_scrapper/assets/112259316/e9094e20-b605-4618-8ec7-7aef14c1322c
 
 </header>

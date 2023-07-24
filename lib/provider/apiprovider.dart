@@ -3,13 +3,18 @@ import 'package:sky_scrapper/provider/helper/apihelper.dart';
 
 class WeatherProvider extends ChangeNotifier {
   Map<String, dynamic>? current;
-  List allday = [];
+  late List allday = [];
   List NextDayWeather= [];
-
+  bool theme = false;
   WeatherProvider() {
     getnewWeather();
     allDayWeather();
     nextdayWeather();
+  }
+
+  ChangeTheme({required bool val}){
+    theme = val;
+    notifyListeners();
   }
 
   getnewWeather({String LocationName = "surat"}) async {

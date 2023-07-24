@@ -49,12 +49,17 @@ experience.</p>
 <p>- Flutter framework with MVC and Provider architecture</p>
 
  <h2>Screenshot:-</h2>
-<img src="https://github.com/aryansabhani/Departure/assets/112259316/8a4d4575-5399-49a8-9be3-eaeaefb13848" alt="Girl in a jacket" height="400">
-<img src="https://github.com/aryansabhani/Departure/assets/112259316/5d330b9e-e10e-42bb-88ca-19915264e6a7" height="400">
-<img src="https://github.com/aryansabhani/Departure/assets/112259316/dbfc2fca-d980-4986-8671-2b336ec37daf" alt="Girl in a jacket" height="400">
-<img src="https://github.com/aryansabhani/Departure/assets/112259316/65db9486-8748-4843-a59e-265689aa95a8" alt="Girl in a jacket" height="400">
-<img src="https://github.com/aryansabhani/Departure/assets/112259316/e1cc6d90-a60a-402f-9a5d-6202fb5b4d59" alt="Girl in a jacket" height="400">
+<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/dbfd7925-4b1e-471a-a7ae-61a3ac2727a4"  height="400">
+<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/ccab27b2-9283-4610-8842-d8f0840977f1" height="400">
+<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a9f69211-13d2-4488-a195-9abc3b883923"  height="400">
+<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a9898a5a-dc09-42cc-90fd-1abd931e31d6"  height="400">
+<img src="https://github.com/aryansabhani/sky_scrapper/assets/112259316/a48054f3-e0c8-41d7-b19c-22497f220b4f" alt="Girl in a jacket" height="400">
 
+![image]()
+![image]()
+![image]()
+![image]()
+![image]()
 
 
 <h2>Video:-</h2>
